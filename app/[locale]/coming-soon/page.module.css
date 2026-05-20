@@ -1,0 +1,482 @@
+/* app/[locale]/coming-soon/page.module.css */
+/* ============================================
+   LAYOUT PRINCIPAL
+   Figma: 1920×1080, background #272149
+   ============================================ */
+
+.page {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #272149;
+  overflow: hidden;
+}
+
+/* ============================================
+   NAVBAR WRAPPER
+   Figma: Frame 4585 — left:20px, top:0
+   width:117px, height:1026px
+   padding-top: 55px
+   ============================================ */
+
+.navbarWrapper {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 117px;
+  height: 1026px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 55px;
+  box-sizing: border-box;
+}
+
+/* Navbar inner — background rgba(0,0,0,0.3), border-radius:12px */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 32px;
+  width: 117px;
+  /* hauteur calculée: 1026 - 55 = 971px */
+  height: 971px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* ── Logo + Badge Bêta ── */
+.navbarTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  /* width fixe: 39px (zone logo) */
+  width: 39px;
+}
+
+/* Logo: 27×32 exactement comme Figma */
+.navbarLogo {
+  width: 27px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Badge Bêta */
+.navbarBeta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 6px;
+  gap: 10px;
+  width: 39px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.6px solid #E1C3FF;
+  border-radius: 100px;
+  box-sizing: border-box;
+}
+
+.navbarBetaLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #E1C3FF;
+  white-space: nowrap;
+}
+
+/* ── Zone liens: occupe toute la hauteur restante ── */
+.navbarLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 69px;
+}
+
+/* Íconos superiores */
+.navbarLinksTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 69px;
+}
+
+/* Íconos inferiores */
+.navbarLinksBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 69px;
+}
+
+/* Botón nav genérico */
+.navButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 69px;
+  height: 48px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.navButtonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* ── Placeholder avatar (photo de profil) ── */
+.navAvatarPlaceholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9E96CF 0%, #6B5FA0 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ── Placeholder HEC logo ── */
+.navHecPlaceholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   CONTENU PRINCIPAL
+   Figma: Frame 5615 — left:281px, top:347px
+   width:955px, height:332px, gap:24px
+   ============================================ */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+  position: absolute;
+  width: 955px;
+  height: 332px;
+  left: 281px;
+  top: 347px;
+}
+
+/* Badge "Page en Construction" */
+.badge {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  height: 36px;
+  background: rgba(191, 185, 223, 0.1);
+  border-radius: 999px;
+}
+
+.badgeText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #BFB9DF;
+  white-space: nowrap;
+}
+
+/* Frame 5613 */
+.contentBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 62px;
+  width: 955px;
+}
+
+/* Frame 5612 — titre + description */
+.contentText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+  width: 955px;
+}
+
+/* H1 */
+.title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #A199D2;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Description wrapper */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 900px;
+  flex-wrap: wrap;
+}
+
+.descriptionLine1 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  color: #877EBC;
+}
+
+.descriptionText {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  color: #877EBC;
+}
+
+.descriptionBrand {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  color: #E3E0F6;
+}
+
+/* Link */
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 12px;
+  height: 32px;
+}
+
+.linkArrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.linkText {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #E1C3FF;
+}
+
+/* ============================================
+   MASCOTTE
+   Figma: left:1380px, top:calc(50% - 426px)
+   width:383px, height:852px
+   ============================================ */
+
+.mascot {
+  position: absolute;
+  width: 383px;
+  height: 852px;
+  left: 1380px;
+  top: calc(50% - 426px);
+}
+
+.mascot svg {
+  width: 383px;
+  height: 852px;
+}
+
+/* ============================================
+   RESPONSIVE — 1400×900
+   ============================================ */
+
+@media screen and (max-width: 1400px) {
+  .page {
+    width: 1400px;
+    height: 900px;
+  }
+
+  .content {
+    left: 207px;
+    top: 289px;
+    width: 697px;
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .descriptionText,
+  .descriptionBrand,
+  .descriptionLine1 {
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .linkText {
+    font-size: 17px;
+  }
+
+  .mascot {
+    left: 1007px;
+    top: calc(50% - 355px);
+    width: 279px;
+    height: 621px;
+  }
+
+  .mascot svg {
+    width: 279px;
+    height: 621px;
+  }
+
+  .navbarWrapper {
+    width: 85px;
+    height: 748px;
+    left: 15px;
+  }
+
+  .navbar {
+    width: 85px;
+    height: 708px;
+    padding: 17px;
+    gap: 23px;
+  }
+
+  .navButton {
+    width: 50px;
+    height: 35px;
+  }
+
+  .navbarLinks {
+    width: 50px;
+  }
+
+  .navbarLinksTop {
+    width: 50px;
+  }
+
+  .navbarLinksBottom {
+    width: 50px;
+  }
+}
+
+/* ── Botones inferiores con punto de notificación ── */
+.navButtonWithDot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button_Nav pequeño para parte inferior (48×48px) */
+.navButtonSmall {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: default;
+  box-sizing: border-box;
+  isolation: isolate;
+}
+
+/* Ellipse 153 — punto de notificación */
+/* Figma: left:31px top:10px dans Button_Nav 48×48px */
+.notifDot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9E96CF;
+  left: 31px;
+  top: 10px;
+  z-index: 1;
+}
+
+/* Frame 2652 — contenedor foto + HEC */
+/* Figma: padding:4px 12px, gap:16px, width:69px height:52.26px, border-radius:8px */
+.navProfileFrame {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 16px;
+  width: 69px;
+  height: 52.26px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Rectangle 158 — foto de perfil */
+/* Figma: 40×40px, border-radius:2px, background:url(image.png) */
+.navProfilePhoto {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #5a4f8a 0%, #3d3465 100%);
+  flex-shrink: 0;
+}
+
+/* Logo licence (HEC) — superpuesto sobre la foto */
+/* Figma: 16×16.26px, left:29px top:28px (absoluto dentro de Group 787) */
+.navHecBadge {
+  position: absolute;
+  width: 16px;
+  height: 16.26px;
+  left: calc(12px + 29px); /* padding-left + offset */
+  top: calc(4px + 28px);   /* padding-top + offset */
+}
+
+/* Rectangle 92 — fondo blanco con borde */
+/* Figma: background:#FFFFFF, border:2px solid #B2B2B2, border-radius:2px */
+.navHecInner {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border: 2px solid #B2B2B2;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
