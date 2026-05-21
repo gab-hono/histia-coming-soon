@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Histia - Page en construction",
     description: "Cette page arrive bientôt",
+    icons: {
+        icon: "/logoStolosSansMention.svg",
+    },
 };
 
 export default async function LocaleLayout({
