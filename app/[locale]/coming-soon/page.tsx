@@ -11,6 +11,9 @@ import {
   IconModeModification,
   IconBoussole,
   IconVector,
+  IconChat,
+  IconNotification,
+  IconTrad,
 } from '@/components/NavIcons'
 import styles from './page.module.css'
 
@@ -33,8 +36,8 @@ export default async function ComingSoonPage({ params }: Props) {
           {/* Logo + Beta */}
           <div className={styles.navbarTop}>
             <Image
-              src="/logoStolos.png"
-              alt="Stolos"
+              src="/logoStolosSansMention.svg"
+              alt="Logo"
               width={27}
               height={32}
               className={styles.navbarLogo}
@@ -69,41 +72,48 @@ export default async function ComingSoonPage({ params }: Props) {
             {/* Frame 4497 — íconos inferiores */}
             <div className={styles.navbarLinksBottom}>
 
-              {/* Botón 1: soporte con punto */}
+              {/* Botón notificación con punto */}
               <div className={styles.navButtonWithDot}>
                 <button className={styles.navButtonSmall}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <rect x="4" y="3" width="16" height="18" rx="1"
-                      stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" fill="none"/>
-                  </svg>
+                  <span className={styles.navButtonIcon}><IconNotification /></span>
                 </button>
                 <div className={styles.notifDot}/>
               </div>
 
-              {/* Botón 2: silueta usuario sólida + punto */}
+              {/* Botón chat con punto */}
               <div className={styles.navButtonWithDot}>
                 <button className={styles.navButtonSmall}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
-                      fill="rgba(255,255,255,0.7)"
-                    />
-                    <path
-                      d="M2 20C2 17 6.47715 14 12 14C17.5228 14 22 17 22 20"
-                      stroke="rgba(255,255,255,0.7)"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+                  <span className={styles.navButtonIcon}><IconChat /></span>
                 </button>
                 <div className={styles.notifDot}/>
               </div>
+
+              {/* Traduction button - without dot */}
+              <button className={styles.navButtonSmall}>
+                <span className={styles.navButtonIcon}><IconTrad /></span>
+
+              </button>
+
 
               {/* Frame 2652: foto perfil + logo HEC */}
               <div className={styles.navProfileFrame}>
-                <div className={styles.navProfilePhoto}/>
+                <Image
+                  src="/imageProfil.svg"
+                  alt="Photo profil"
+                  width={40}
+                  height={40}
+                  className={styles.navProfilePhoto}
+                />
                 <div className={styles.navHecBadge}>
-                  <div className={styles.navHecInner}/>
+                  <div className={styles.navHecInner}>
+                    <Image
+                      src="/logoHEC.svg"
+                      alt="logoHEC"
+                      width={13}
+                      height={7}
+                      style={{ display: 'block' }}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -123,18 +133,32 @@ export default async function ComingSoonPage({ params }: Props) {
             <h1 className={styles.title}>{content.title.value}</h1>
 
             <div className={styles.description}>
-              <p className={styles.descriptionLine1}>
+              {/* Línea 1: Frame 5622 — texto + logo + "Stolos n'est" */}
+              <div className={styles.descriptionRow}>
                 <span className={styles.descriptionText}>
-                  {content.description1.value}{' '}
+                  {content.description1.value}
+                </span>
+                {/* Logo Stolos inline */}
+                <span className={styles.descriptionLogoInline}>
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.25 10.35L0.6 28H0V27.4L17.65 9.75L18.25 10.35Z" fill="#E3E0F6" transform="matrix(0.04, 1, -1, 0.04, 0, 0)"/>
+                    <path d="M18.25 10.35L0.6 28H0V27.4L17.65 9.75L18.25 10.35Z" fill="#E3E0F6" transform="matrix(-0.9, 0.43, -0.43, -0.9, 0, 0)"/>
+                    <path d="M0 0H18.25V17.65H0V0Z" fill="#E3E0F6"/>
+                    <circle cx="16.59" cy="17.85" r="1.385" fill="#E3E0F6"/>
+                    <circle cx="2.05" cy="15.05" r="0.925" fill="#E3E0F6"/>
+                    <circle cx="11.89" cy="8.69" r="1.11" fill="#E3E0F6"/>
+                  </svg>
                 </span>
                 <span className={styles.descriptionBrand}>
-                  {content.brandName.value}
+                  {content.brandName.value} n&apos;est
                 </span>
-                <span className={styles.descriptionText}>
-                  {' '}{content.description2.value}
-                </span>
-              </p>
+              </div>
+              {/* Línea 2: texto suelto */}
+              <span className={styles.descriptionText}>
+                {content.description2.value}
+              </span>
             </div>
+
           </div>
 
           <div className={styles.link}>
