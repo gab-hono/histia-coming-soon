@@ -22,7 +22,7 @@ export const IconModeModification = () => (
 )
 
 export const IconBoussole = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="20" height="20" viewBox="-1 -1 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="10" cy="10" r="9.4" stroke="white" strokeOpacity="0.7" strokeWidth="1.2"/>
     <path d="M12.4668 12.4648L5.91895 14.2217L7.67383 7.67285L14.2207 5.91797L12.4668 12.4648Z" stroke="white" strokeOpacity="0.7" strokeWidth="1.2"/>
     <circle cx="10" cy="10" r="0.5" stroke="white" strokeOpacity="0.7"/>
