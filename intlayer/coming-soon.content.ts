@@ -1,5 +1,4 @@
 import { DeclarationContent, t } from "intlayer";
-import { title } from "process";
 
 const comingSoonContent = {
     key: "coming-soon",
@@ -14,15 +13,23 @@ const comingSoonContent = {
         }),
         description1: t({
             fr: "Nous sommes encore en version bêta,",
-            en: "We are still in beta version,"
+            en: "We are still in beta version,",
         }),
         brandName: t({
             fr: "Stolos",
             en: "Stolos",
         }),
+        brandSuffix: t({
+            fr: "n'est",
+            en: "is",
+        }),
         description2: t({
-            fr: "n'est pas encore complet, notre équipe travaille d'arrache pied pour vous apporter cette page au plus vite !",
-            en: "is not yet complete, our team is working hard to bring you this page as soon as possible!",
+            fr: "pas encore complet, notre équipe travaille d'arrache",
+            en: "not yet complete, our team is working hard",
+        }),
+        description3: t({
+            fr: "pied pour vous apporter cette page au plus vite !",
+            en: "to bring you this page as soon as possible!",
         }),
         linkText: t({
             fr: "Nos nouveautés ici",

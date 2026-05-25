@@ -133,29 +133,32 @@ export default async function ComingSoonPage({ params }: Props) {
             <h1 className={styles.title}>{content.title.value}</h1>
 
             <div className={styles.description}>
-              {/* Línea 1: Frame 5622 — texto + logo + "Stolos n'est" */}
+              {/* Línea 1 */}
               <div className={styles.descriptionRow}>
                 <span className={styles.descriptionText}>
                   {content.description1.value}
                 </span>
-                {/* Logo Stolos inline */}
-                <span className={styles.descriptionLogoInline}>
-                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.25 10.35L0.6 28H0V27.4L17.65 9.75L18.25 10.35Z" fill="#E3E0F6" transform="matrix(0.04, 1, -1, 0.04, 0, 0)"/>
-                    <path d="M18.25 10.35L0.6 28H0V27.4L17.65 9.75L18.25 10.35Z" fill="#E3E0F6" transform="matrix(-0.9, 0.43, -0.43, -0.9, 0, 0)"/>
-                    <path d="M0 0H18.25V17.65H0V0Z" fill="#E3E0F6"/>
-                    <circle cx="16.59" cy="17.85" r="1.385" fill="#E3E0F6"/>
-                    <circle cx="2.05" cy="15.05" r="0.925" fill="#E3E0F6"/>
-                    <circle cx="11.89" cy="8.69" r="1.11" fill="#E3E0F6"/>
-                  </svg>
-                </span>
+                <Image
+                  src="/logoStolosSansMention.svg"
+                  alt="Stolos"
+                  width={20}
+                  height={20}
+                  className={styles.descriptionLogoInline}
+                />
                 <span className={styles.descriptionBrand}>
-                  {content.brandName.value} n&apos;est
+                  {content.brandName.value}
+                </span>
+                <span className={styles.descriptionText}>
+                  {content.brandSuffix.value}
                 </span>
               </div>
-              {/* Línea 2: texto suelto */}
+              {/* Línea 2 */}
               <span className={styles.descriptionText}>
                 {content.description2.value}
+              </span>
+              {/* Línea 3 */}
+              <span className={styles.descriptionText}>
+                {content.description3.value}
               </span>
             </div>
 
