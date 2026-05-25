@@ -5,17 +5,8 @@ import { LocalesValues } from 'intlayer'
 import Image from 'next/image'
 import MascotFR from '@/components/MascotFR'
 import MascotEN from '@/components/MascotEN'
-import {
-  IconTableauBord,
-  IconRepertoire,
-  IconModeModification,
-  IconBoussole,
-  IconVector,
-  IconChat,
-  IconNotification,
-  IconTrad,
-} from '@/components/NavIcons'
 import styles from './page.module.css'
+import Navbar from '@/components/Navbar'
 
 type Props = {
   params: Promise<{ locale: LocalesValues }>
@@ -29,91 +20,7 @@ export default async function ComingSoonPage({ params }: Props) {
   return (
     <div className={styles.page}>
 
-      {/* ── NAVBAR ── */}
-      <div className={styles.navbarWrapper}>
-        <nav className={styles.navbar}>
-
-          {/* Logo + Beta */}
-          <div className={styles.navbarTop}>
-            <Image
-              src="/logoStolosSansMention.svg"
-              alt="Logo"
-              width={27}
-              height={32}
-              className={styles.navbarLogo}
-            />
-            <div className={styles.navbarBeta}>
-              <span className={styles.navbarBetaLabel}>Bêta</span>
-            </div>
-          </div>
-
-          <div className={styles.navbarLinks}>
-
-            <div className={styles.navbarLinksTop}>
-              <button className={styles.navButton}>
-                <span className={styles.navButtonIcon}><IconTableauBord /></span>
-              </button>
-              <button className={styles.navButton}>
-                <span className={styles.navButtonIcon}><IconRepertoire /></span>
-              </button>
-              <button className={styles.navButton}>
-                <span className={styles.navButtonIcon}><IconModeModification /></span>
-              </button>
-              <button className={styles.navButton}>
-                <span className={styles.navButtonIcon}><IconBoussole /></span>
-              </button>
-              <button className={styles.navButton}>
-                <span className={styles.navButtonIcon}><IconVector /></span>
-              </button>
-            </div>
-
-            <div className={styles.navbarLinksBottom}>
-
-              <div className={styles.navButtonWithDot}>
-                <button className={styles.navButtonSmall}>
-                  <span className={styles.navButtonIcon}><IconNotification /></span>
-                </button>
-                <div className={styles.notifDot}/>
-              </div>
-
-              <div className={styles.navButtonWithDot}>
-                <button className={styles.navButtonSmall}>
-                  <span className={styles.navButtonIcon}><IconChat /></span>
-                </button>
-                <div className={styles.notifDot}/>
-              </div>
-
-              <button className={styles.navButtonSmall}>
-                <span className={styles.navButtonIcon}><IconTrad /></span>
-
-              </button>
-
-
-              <div className={styles.navProfileFrame}>
-                <Image
-                  src="/imageProfil.svg"
-                  alt="Photo profil"
-                  width={40}
-                  height={40}
-                  className={styles.navProfilePhoto}
-                />
-                <div className={styles.navHecBadge}>
-                  <div className={styles.navHecInner}>
-                    <Image
-                      src="/logoHEC.svg"
-                      alt="logoHEC"
-                      width={13}
-                      height={7}
-                      style={{ display: 'block' }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </nav>
-      </div>
+    <Navbar />
 
       <main className={styles.content}>
         <div className={styles.badge}>
