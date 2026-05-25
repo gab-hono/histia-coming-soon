@@ -47,10 +47,8 @@ export default async function ComingSoonPage({ params }: Props) {
             </div>
           </div>
 
-          {/* Frame 2652 — enlaces */}
           <div className={styles.navbarLinks}>
 
-            {/* Frame 2645 — íconos superiores */}
             <div className={styles.navbarLinksTop}>
               <button className={styles.navButton}>
                 <span className={styles.navButtonIcon}><IconTableauBord /></span>
@@ -69,10 +67,8 @@ export default async function ComingSoonPage({ params }: Props) {
               </button>
             </div>
 
-            {/* Frame 4497 — íconos inferiores */}
             <div className={styles.navbarLinksBottom}>
 
-              {/* Botón notificación con punto */}
               <div className={styles.navButtonWithDot}>
                 <button className={styles.navButtonSmall}>
                   <span className={styles.navButtonIcon}><IconNotification /></span>
@@ -80,7 +76,6 @@ export default async function ComingSoonPage({ params }: Props) {
                 <div className={styles.notifDot}/>
               </div>
 
-              {/* Botón chat con punto */}
               <div className={styles.navButtonWithDot}>
                 <button className={styles.navButtonSmall}>
                   <span className={styles.navButtonIcon}><IconChat /></span>
@@ -88,14 +83,12 @@ export default async function ComingSoonPage({ params }: Props) {
                 <div className={styles.notifDot}/>
               </div>
 
-              {/* Traduction button - without dot */}
               <button className={styles.navButtonSmall}>
                 <span className={styles.navButtonIcon}><IconTrad /></span>
 
               </button>
 
 
-              {/* Frame 2652: foto perfil + logo HEC */}
               <div className={styles.navProfileFrame}>
                 <Image
                   src="/imageProfil.svg"
@@ -122,7 +115,6 @@ export default async function ComingSoonPage({ params }: Props) {
         </nav>
       </div>
 
-      {/* ── CONTENU PRINCIPAL ── */}
       <main className={styles.content}>
         <div className={styles.badge}>
           <span className={styles.badgeText}>{content.badge.value}</span>
@@ -133,7 +125,7 @@ export default async function ComingSoonPage({ params }: Props) {
             <h1 className={styles.title}>{content.title.value}</h1>
 
             <div className={styles.description}>
-              {/* Línea 1 */}
+
               <div className={styles.descriptionRow}>
                 <span className={styles.descriptionText}>
                   {content.description1.value}
@@ -152,11 +144,11 @@ export default async function ComingSoonPage({ params }: Props) {
                   {content.brandSuffix.value}
                 </span>
               </div>
-              {/* Línea 2 */}
+
               <span className={styles.descriptionText}>
                 {content.description2.value}
               </span>
-              {/* Línea 3 */}
+
               <span className={styles.descriptionText}>
                 {content.description3.value}
               </span>
@@ -181,7 +173,7 @@ export default async function ComingSoonPage({ params }: Props) {
         </div>
       </main>
 
-      {/* ── MASCOTTE ── */}
+
       <div className={styles.mascot}>
         {isFR ? <MascotFR /> : <MascotEN />}
       </div>
