@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Histia : Page en Construction
 
-## Getting Started
+Réplique fidèle d'une page "coming soon" réalisée dans le cadre d'un cas pratique technique.
 
-First, run the development server:
+## Stack technique
+
+- **Next.js 16**  App Router, Server Components
+- **TypeScript**
+- **Intlayer v8.9.8** internationalisation (FR / EN)
+- **CSS Modules** styles fidèles aux mesures Figma
+- **Vercel** déploiement
+
+## Lancer le projet
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le script `dev` lance `intlayer watch` et `next dev` en parallèle.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ouvrir [http://localhost:3000](http://localhost:3000). Redirige automatiquement vers `/fr/coming-soon`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Pour la version anglaise : [http://localhost:3000/en/coming-soon](http://localhost:3000/en/coming-soon)
 
-## Learn More
+## Choix techniques
 
-To learn more about Next.js, take a look at the following resources:
+**Internationalisation avec Intlayer** : le projet utilise Intlayer v8.9.8 avec le format `key`/`content` qui est requis par cette version. Les textes sont définis dans `intlayer/coming-soon.content.ts` et accessibles via `getIntlayer('coming-soon', locale)`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Dimensions fixes** : la page est conçue pour un viewport 1920×1080px, fidèle au design Figma fourni. Pour tester à la bonne résolution, utiliser les DevTools du navigateur avec ces dimensions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**SVGs inline** : les icônes de la navbar sont des composants SVG inline pour un contrôle précis des couleurs et de l'opacité, conformément au design Figma.
 
-## Deploy on Vercel
+## Ce qui a été répliqué
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Navbar latérale avec logo, badge Bêta, 5 icônes supérieures, 3 icônes inférieures avec points de notification, photo de profil et logo HEC
+- Effet glassmorphism sur la navbar (backdrop-filter blur + border)
+- Hover sur les boutons de la navbar
+- Contenu principal : badge, titre H1, description avec logo inline et mise en forme typographique exacte
+- Mascotte différente selon la locale (FR/EN)
+- Favicon avec logo Stolos
+- Internationalisation complète FR/EN
