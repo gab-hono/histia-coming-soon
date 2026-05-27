@@ -1,13 +1,13 @@
 .navbarWrapper {
   position: absolute;
-  left: 20px;
+  left: 1.04vw;     /* 20/1920 */
   top: 0;
-  width: 117px;
-  height: 1026px;
+  width: 6.09vw;    /* 117/1920 */
+  height: 95vh;     /* 1026/1080 */
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 55px;
+  padding-top: 5.09vh;  /* 55/1080 */
   box-sizing: border-box;
 }
 
@@ -15,10 +15,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px;
-  gap: 32px;
-  width: 117px;
-  height: 971px;
+  padding: 2.22vh 1.25vw;   /* 24/1080, 24/1920 */
+  gap: 2.96vh;              /* 32/1080 */
+  width: 6.09vw;
+  height: 89.91vh;          /* 971/1080 */
   background: rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   box-sizing: border-box;
@@ -31,23 +31,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  width: 39px;
+  gap: 1.11vh;
+  width: 2.03vw;    /* 39/1920 */
 }
 
 .navbarLogo {
+  width: 1.41vw;    /* 27/1920 */
+  height: 2.96vh;   /* 32/1080 */
   object-fit: contain;
 }
 
 .navbarBeta {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 2px 6px;
-  gap: 10px;
-  width: 39px;
-  height: 20px;
+  padding: 0.19vh 0.31vw;
+  width: 2.03vw;
+  height: 1.85vh;
   background: rgba(255, 255, 255, 0.08);
   border: 0.6px solid #E1C3FF;
   border-radius: 100px;
@@ -57,8 +57,7 @@
 .navbarBetaLabel {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.63vw;
   color: #E1C3FF;
   white-space: nowrap;
 }
@@ -69,46 +68,51 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  width: 69px;
+  width: 3.59vw;    /* 69/1920 */
 }
 
 .navbarLinksTop {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  width: 69px;
+  gap: 0.37vh;
+  width: 3.59vw;
 }
 
 .navbarLinksBottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  width: 69px;
+  gap: 0.74vh;
+  width: 3.59vw;
 }
 
 .navButton {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  width: 69px;
-  height: 48px;
+  padding: 1.11vh 0.63vw;
+  width: 3.59vw;
+  height: 4.44vh;
   border-radius: 8px;
   background: transparent;
   border: none;
-  cursor: default;
+  cursor: pointer;
   box-sizing: border-box;
+  transition: background 0.1s ease;
+}
+
+.navButton:hover,
+.navButtonSmall:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .navButtonIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 1.25vw;
+  height: 2.22vh;
 }
 
 .navButtonWithDot {
@@ -120,28 +124,28 @@
 
 .navButtonSmall {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding: 12px;
-  width: 48px;
-  height: 48px;
+  align-items: center;
+  padding: 1.11vh 0.63vw;
+  width: 2.5vw;
+  height: 4.44vh;
   border-radius: 8px;
   background: transparent;
   border: none;
-  cursor: default;
+  cursor: pointer;
   box-sizing: border-box;
   isolation: isolate;
+  transition: background 1s ease;
 }
 
 .notifDot {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 0.42vw;
+  height: 0.74vh;
   border-radius: 50%;
   background: #9E96CF;
-  left: 31px;
-  top: 10px;
+  left: 1.61vw;
+  top: 0.93vh;
   z-index: 1;
 }
 
@@ -150,28 +154,27 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px 12px;
-  gap: 16px;
-  width: 69px;
-  height: 52.26px;
+  padding: 0.37vh 0.63vw;
+  gap: 0.83vw;
+  width: 3.59vw;
+  height: 4.84vh;
   border-radius: 8px;
   box-sizing: border-box;
 }
 
 .navProfilePhoto {
-  position: relative;
-  width: 40px;
-  height: 40px;
+  width: 2.08vw;
+  height: 3.7vh;
   border-radius: 2px;
   flex-shrink: 0;
 }
 
 .navHecBadge {
   position: absolute;
-  width: 16px;
-  height: 16.26px;
-  left: calc(12px + 29px);
-  top: calc(4px + 28px);
+  width: 0.83vw;
+  height: 1.51vh;
+  left: calc(0.63vw + 1.51vw);
+  top: calc(0.37vh + 2.59vh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,15 +191,4 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-
-.navButton,
-.navButtonSmall {
-  transition: background 1s ease;
-}
-
-.navButton:hover,
-.navButtonSmall:hover {
-  background: rgba(255, 255, 255, 0.08);
-  cursor: pointer;
 }

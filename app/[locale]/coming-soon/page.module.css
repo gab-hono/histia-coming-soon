@@ -1,43 +1,27 @@
-/* ============================================
-   LAYOUT PRINCIPAL
-   Figma: 1920×1080, background #272149
-   ============================================ */
-
 .page {
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   background: #272149;
   overflow: hidden;
 }
 
-/* ============================================
-   CONTENU PRINCIPAL
-   Figma: Frame 5615 — left:281px, top:347px
-   width:955px, height:332px, gap:24px
-   ============================================ */
-
+/* Contenu — proportions Figma: left:281/1920, top:347/1080 */
 .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
-  gap: 24px;
+  gap: 2.22vh;        /* 24/1080 */
   position: absolute;
-  width: 955px;
-  height: 332px;
-  left: 281px;
-  top: 347px;
+  width: 49.74vw;     /* 955/1920 */
+  left: 14.64vw;      /* 281/1920 */
+  top: 32.13vh;       /* 347/1080 */
 }
 
 .badge {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  padding: 10px 16px;
-  gap: 10px;
-  height: 36px;
+  padding: 0.93vh 0.83vw;   /* 10/1080, 16/1920 */
   background: rgba(191, 185, 223, 0.1);
   border-radius: 999px;
 }
@@ -45,8 +29,8 @@
 .badgeText {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.63vw;    /* 12/1920 */
+  line-height: 1.48vh;  /* 16/1080 */
   color: #BFB9DF;
   white-space: nowrap;
 }
@@ -55,26 +39,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
-  gap: 62px;
-  width: 955px;
+  gap: 5.74vh;    /* 62/1080 */
+  width: 100%;
 }
 
 .contentText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
-  gap: 24px;
-  width: 955px;
+  gap: 2.22vh;    /* 24/1080 */
+  width: 100%;
 }
 
 .title {
   font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 600;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 2.5vw;     /* 48/1920 */
+  line-height: 5.37vh;  /* 58/1080 */
   color: #A199D2;
   margin: 0;
   white-space: nowrap;
@@ -83,47 +64,41 @@
 .description {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  gap: 0;
-  width: 639px;
+  width: 33.28vw;   /* 639/1920 */
 }
 
 .descriptionRow {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0;
-  gap: 8px;
-  height: 32px;
+  gap: 0.42vw;    /* 8/1920 */
+  height: 2.96vh; /* 32/1080 */
   flex-wrap: nowrap;
 }
 
 .descriptionLogoInline {
   display: inline-flex;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: 1.04vw;  /* 20/1920 */
+  height: 1.85vh; /* 20/1080 */
   flex-shrink: 0;
   object-fit: contain;
 }
 
 .descriptionText {
   font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.25vw;    /* 24/1920 */
+  line-height: 2.96vh;  /* 32/1080 */
   letter-spacing: 0.02em;
   color: #877EBC;
 }
 
 .descriptionBrand {
   font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.25vw;
+  line-height: 2.96vh;
   letter-spacing: 0.02em;
   color: #E3E0F6;
   white-space: nowrap;
@@ -133,14 +108,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0;
-  gap: 12px;
-  height: 32px;
+  gap: 0.63vw;    /* 12/1920 */
+  height: 2.96vh; /* 32/1080 */
 }
 
 .linkArrow {
-  width: 32px;
-  height: 32px;
+  width: 1.67vw;
+  height: 2.96vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,72 +123,22 @@
 
 .linkText {
   font-family: 'Inter', sans-serif;
-  font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.25vw;
+  line-height: 2.96vh;
   color: #E1C3FF;
 }
 
-/* ============================================
-   MASCOTTE
-   Figma: left:1380px, top:calc(50% - 426px)
-   width:383px, height:852px
-   ============================================ */
-
+/* Mascotte — proportions Figma: left:1380/1920, top:calc(50%-426/1080) */
 .mascot {
   position: absolute;
-  width: 383px;
-  height: 852px;
-  left: 1380px;
-  top: calc(50% - 426px);
+  width: 19.95vw;   /* 383/1920 */
+  height: 78.89vh;  /* 852/1080 */
+  left: 71.88vw;    /* 1380/1920 */
+  top: calc(50vh - 39.44vh); /* calc(50% - 426/1080) */
 }
 
 .mascot svg {
-  width: 383px;
-  height: 852px;
-}
-
-/* ============================================
-   RESPONSIVE — 1400×900
-   ============================================ */
-
-@media screen and (max-width: 1400px) {
-  .page {
-    width: 1400px;
-    height: 900px;
-  }
-
-  .content {
-    left: 207px;
-    top: 289px;
-    width: 697px;
-  }
-
-  .title {
-    font-size: 35px;
-    line-height: 42px;
-  }
-
-  .descriptionText,
-  .descriptionBrand {
-    font-size: 17px;
-    line-height: 23px;
-  }
-
-  .linkText {
-    font-size: 17px;
-  }
-
-  .mascot {
-    left: 1007px;
-    top: calc(50% - 355px);
-    width: 279px;
-    height: 621px;
-  }
-
-  .mascot svg {
-    width: 279px;
-    height: 621px;
-  }
+  width: 100%;
+  height: 100%;
 }

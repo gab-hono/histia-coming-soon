@@ -7,29 +7,29 @@ import type { LocalesValues } from "intlayer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Histia - Page en construction",
-    description: "Cette page arrive bientôt",
-    icons: {
-        icon: "/logoStolosSansMention.svg",
-    },
+  title: "Histia - Page en construction",
+  description: "Cette page arrive bientôt",
+  icons: {
+    icon: "/logoStolosSansMention.svg",
+  },
 };
 
 export default async function LocaleLayout({
-    children,
-    params,
+  children,
+  params,
 }: {
-    children: React.ReactNode;
-    params: Promise<{ locale: LocalesValues }>;
+  children: React.ReactNode;
+  params: Promise<{ locale: LocalesValues }>;
 }) {
-    const { locale } = await params;
+  const { locale } = await params;
 
-    return (
-        <html lang={locale}>
-            <body className={inter.className}>
-                <IntlayerClientProvider locale={locale}>
-                    {children}
-                </IntlayerClientProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang={locale}>
+      <body className={inter.className}>
+        <IntlayerClientProvider locale={locale}>
+          {children}
+        </IntlayerClientProvider>
+      </body>
+    </html>
+  );
 }
